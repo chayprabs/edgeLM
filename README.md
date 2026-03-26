@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EdgeLM
 
 **A custom inference engine targeting 100+ tokens/second for 3B-parameter LLMs on consumer Intel hardware -- no discrete GPU required.**
@@ -202,3 +203,10 @@ TBD -- will be determined before public release.
 ---
 
 *Built by Chait. Research ongoing.*
+=======
+#edgeLM
+
+We are trying to build architecture for running low-parameter (≤3B) language models on laptops with optimized power efficiency.
+
+Our goal includes having an output of 25+ tokens / second from an 8GB memory & a normal intel CPU laptop without any GPU.
+>>>>>>> 40b6ff3f36598164aede05ead96c6710a939f0b3
