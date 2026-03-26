@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:chipsandcheese.com)",
+      "WebFetch(domain:www.anandtech.com)",
+      "WebFetch(domain:extensa.tech)",
+      "WebFetch(domain:www.hwcooling.net)",
+      "WebFetch(domain:www.intel.com)",
+      "WebFetch(domain:eunomia.dev)",
+      "WebFetch(domain:bitsum.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:onlinelibrary.wiley.com)",
+      "WebFetch(domain:www.corsix.org)",
+      "WebFetch(domain:research.spec.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:sillycross.github.io)"
+    ]
+  }
+}

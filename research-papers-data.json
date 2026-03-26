@@ -1,0 +1,3652 @@
+[
+  {
+    "title": "llama.cpp quantization techniques",
+    "authors_year": "Georgi Gerganov et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "low-memory inference",
+      "CPU/GPU optimization"
+    ],
+    "target_hardware": "x86 CPUs, Intel integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 4,
+    "model_size_b": 3,
+    "quantization": "Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient 4-bit quantization enables low-memory LLM inference on commodity hardware",
+    "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md"
+  },
+  {
+    "title": "llama.cpp",
+    "authors_year": "ggml-org, 2023",
+    "techniques": [
+      "C/C++ implementation",
+      "Low-memory inference",
+      "Quantization"
+    ],
+    "target_hardware": "CPU, some GPU support",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Various quantization modes",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Efficient C/C++ library for running large language models on commodity hardware",
+    "url": "https://github.com/ggml-org/llama.cpp"
+  },
+  {
+    "title": "llama.cpp",
+    "authors_year": "Georgi Gerganov et al., 2023",
+    "techniques": [
+      "C/C++ native implementation",
+      "Low-memory inference",
+      "Quantization",
+      "Multi-platform support"
+    ],
+    "target_hardware": "x86 CPUs, Apple Silicon, CUDA GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": "INT4, Q4_0, Q4_1, Q5_0, Q5_1, Q8_0",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Efficient LLM inference with minimal memory using C/C++ and quantization techniques",
+    "url": "https://github.com/ggerganov/llama.cpp"
+  },
+  {
+    "title": "llama.cpp",
+    "authors_year": "Georgi Gerganov et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "CPU/GPU inference optimization",
+      "Memory-efficient model loading",
+      "GGML format"
+    ],
+    "target_hardware": "x86 CPUs, Intel integrated GPUs, Apple Silicon, consumer laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 4,
+    "model_size_b": 3,
+    "quantization": "INT4, Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient LLM inference on consumer hardware through aggressive quantization and optimization",
+    "url": "https://github.com/ggml-org/llama.cpp"
+  },
+  {
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "authors_year": "Li et al., 2023",
+    "techniques": [
+      "Activation-aware Weight Quantization",
+      "Protecting 1% salient weights",
+      "Channel scaling to reduce quantization error",
+      "Offline activation statistics collection",
+      "Kernel fusion",
+      "Platform-aware weight packing"
+    ],
+    "target_hardware": "Edge devices, desktop and mobile GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Protecting only 1% salient weight channels can significantly reduce quantization error.",
+    "url": "https://arxiv.org/abs/2306.00978"
+  },
+  {
+    "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+    "authors_year": "Dettmers et al., 2022",
+    "techniques": [
+      "Vector-wise quantization",
+      "Mixed-precision decomposition",
+      "Outlier feature dimension isolation",
+      "8-bit matrix multiplication"
+    ],
+    "target_hardware": "Consumer GPUs, servers",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "8-bit quantization with mixed-precision allows inference on large models without performance loss",
+    "url": "https://arxiv.org/abs/2208.07339"
+  },
+  {
+    "title": "QL ORA: Efficient Finetuning of Quantized LLMs",
+    "authors_year": "Dettmers et al., 2023",
+    "techniques": [
+      "4-bit NormalFloat (NF4) quantization",
+      "Double Quantization",
+      "Paged Optimizers",
+      "Low Rank Adapters (LoRA)"
+    ],
+    "target_hardware": "GPU (48GB)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 48,
+    "model_size_b": 65,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Finetune 4-bit quantized models without performance loss by backpropagating through quantized weights",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/1feb87871436031bdc0f2beaa62a049b-Paper-Conference.pdf"
+  },
+  {
+    "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "authors_year": "Gu et al., 2023",
+    "techniques": [
+      "Selective State Space Models (SSMs)",
+      "Hardware-aware parallel recurrent algorithm",
+      "Input-dependent parameter modulation"
+    ],
+    "target_hardware": "Not specified in detail",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Allowing SSM parameters to be input-dependent enables content-based reasoning",
+    "url": "https://arxiv.org/abs/2312.00752"
+  },
+  {
+    "title": "RWKV: Reinventing RNNs for the Transformer Era",
+    "authors_year": "Bo Peng et al., 2023",
+    "techniques": [
+      "Linear attention mechanism",
+      "Hybrid Transformer/RNN architecture",
+      "Constant computational complexity",
+      "Linear memory scaling"
+    ],
+    "target_hardware": "Not specified, general compute",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 14,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Combines transformer training efficiency with RNN inference efficiency",
+    "url": "https://arxiv.org/abs/2305.13048"
+  },
+  {
+    "title": "TinyLlama: An Open-Source Small Language Model",
+    "authors_year": "TinyLlama et al., 2024",
+    "techniques": [
+      "FlashAttention",
+      "Lit-GPT",
+      "Compact architecture optimization"
+    ],
+    "target_hardware": "General small compute environments",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 1.1,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Compact 1.1B model trained efficiently with community-contributed techniques",
+    "url": "https://arxiv.org/abs/2401.02385"
+  },
+  {
+    "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+    "authors_year": "Yixin Leng et al., 2024",
+    "techniques": [
+      "Dynamic tensor parallelism",
+      "Adaptive computation partitioning",
+      "Hybrid scheduling",
+      "Inference-aware memory optimization"
+    ],
+    "target_hardware": "Consumer-grade GPU (NVIDIA GeForce RTX)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficiently serve large language models on consumer GPUs through intelligent computation partitioning",
+    "url": "https://arxiv.org/abs/2312.12456"
+  },
+  {
+    "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
+    "authors_year": "Taneja et al., 2024",
+    "techniques": [
+      "INT8 quantization",
+      "CUDA kernel variants",
+      "KV cache compression"
+    ],
+    "target_hardware": "GPU with CUDA support",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "INT8 quantization reduces KV cache memory by 4x with minimal accuracy impact",
+    "url": "https://github.com/MaanasTaneja/cuda-kv-cache-compression"
+  },
+  {
+    "title": "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+    "authors_year": "Chen et al., 2023",
+    "techniques": [
+      "Linear programming tensor storage optimization",
+      "Offloading between GPU, CPU, and disk",
+      "4-bit weight compression",
+      "Attention cache compression"
+    ],
+    "target_hardware": "Single 16GB GPU",
+    "benchmark_toks_per_sec": 1,
+    "memory_footprint_gb": 16,
+    "model_size_b": 175,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Flexible resource allocation and 4-bit compression enable high-throughput LLM inference on limited hardware",
+    "url": "https://arxiv.org/abs/2303.06865"
+  },
+  {
+    "title": "Quantized KV Cache - vLLM",
+    "authors_year": "vLLM Team, 2024",
+    "techniques": [
+      "KV Cache Quantization",
+      "FP8 Quantization",
+      "Flash Attention 3 Backend"
+    ],
+    "target_hardware": "General compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "FP8",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantizing KV cache to FP8 reduces memory footprint and enables longer context windows",
+    "url": "https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache"
+  },
+  {
+    "title": "Sometimes Painful but Promising: Feasibility and Trade-offs of On-Device Language Model Inference",
+    "authors_year": "Abstreiter et al., 2025",
+    "techniques": [
+      "quantization",
+      "model compression",
+      "edge AI inference"
+    ],
+    "target_hardware": "CPU-based and GPU-accelerated edge devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": "< 10",
+    "quantization": "quantization techniques mentioned",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantization helps mitigate memory overhead but does not fully eliminate resource bottlenecks",
+    "url": "https://arxiv.org/pdf/2503.09114.pdf"
+  },
+  {
+    "title": "Scaling Laws for Energy Efficiency of Local LLMs",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Quantum-inspired compression",
+      "Input resolution preprocessing",
+      "Continuous sampling of processor and memory usage",
+      "Area-under-curve integration"
+    ],
+    "target_hardware": "MacBook Pro M2, Raspberry Pi 5",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Quantum-inspired compression reduces processor and memory usage by up to 71.9% on CPUs",
+    "url": null
+  },
+  {
+    "title": "Making LLMs even more accessible with bitsandbytes, 4-bit quantization and QLoRA",
+    "authors_year": "HuggingFace et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "QLoRA"
+    ],
+    "target_hardware": "Consumer laptops/desktops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "4-bit quantization and QLoRA can reduce memory requirements for running large language models",
+    "url": "https://huggingface.co/blog/4bit-transformers-bitsandbytes"
+  },
+  {
+    "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+    "authors_year": "Sun et al., 2023",
+    "techniques": [
+      "Retention mechanism",
+      "Parallel representation",
+      "Recurrent representation",
+      "Chunkwise recurrent representation"
+    ],
+    "target_hardware": "GPU, laptop-class compute",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 3.4,
+    "model_size_b": 7,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Retentive Network enables low-cost inference while maintaining training parallelism and performance",
+    "url": "http://arxiv.org/pdf/2307.08621v4.pdf"
+  },
+  {
+    "title": "Sometimes Painful but Promising: Feasibility and Trade-offs of On-Device Language Model Inference",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "quantization",
+      "model compression",
+      "edge device inference"
+    ],
+    "target_hardware": "CPU-based and GPU-accelerated edge devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": "<10",
+    "quantization": "quantization techniques",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantization helps mitigate memory overhead but doesn't fully eliminate resource constraints for LM inference.",
+    "url": "https://arxiv.org/html/2503.09114v2"
+  },
+  {
+    "title": "QuIP: 2-Bit Quantization of Large Language Models With Guarantees",
+    "authors_year": "Dettmers et al., 2023",
+    "techniques": [
+      "Quantization with Incoherence Processing (QuIP)",
+      "Adaptive rounding procedure",
+      "Random orthogonal matrix preprocessing"
+    ],
+    "target_hardware": "Not explicitly specified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "2-bit",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Quantization improves when weight matrices are incoherent and random orthogonal transformations are applied",
+    "url": "https://arxiv.org/abs/2307.13304"
+  },
+  {
+    "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "4-bit quantization",
+      "parameter scale optimization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "4-bit quantization can retain performance comparable to non-quantized LLMs while reducing memory requirements.",
+    "url": "https://arxiv.org/html/2402.16775v1"
+  },
+  {
+    "title": "ggml: Tensor Library for Machine Learning",
+    "authors_year": "Georgi Gerganov et al., 2023",
+    "techniques": [
+      "Optimized tensor library",
+      "Efficient model loading",
+      "Lightweight inference"
+    ],
+    "target_hardware": "x86 CPUs, ARM, Intel integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4, Q4_K_M support",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Lightweight tensor library designed for efficient machine learning inference on diverse hardware",
+    "url": "https://github.com/ggerganov/ggml/blob/master/docs/gguf.md"
+  },
+  {
+    "title": "Llamba: Scaling Distilled Recurrent Models for Efficient Language Processing",
+    "authors_year": "Bick et al., 2024",
+    "techniques": [
+      "Cross-architecture distillation",
+      "Recurrent model architecture (Mamba)",
+      "Model distillation",
+      "Low-data training"
+    ],
+    "target_hardware": "Resource-constrained devices, smartphones, edge platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Distilled recurrent models achieve high efficiency with minimal training data",
+    "url": "https://arxiv.org/html/2502.14458v2"
+  },
+  {
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "authors_year": "Liu et al., 2024",
+    "techniques": [
+      "deep and thin architectures",
+      "embedding sharing",
+      "grouped-query attention",
+      "block-wise weight-sharing"
+    ],
+    "target_hardware": "mobile devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 0.125,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Model architecture matters more than size for small language models on mobile devices",
+    "url": "https://arxiv.org/abs/2402.14905"
+  },
+  {
+    "title": "LLM in a flash: Efficient Large Language Model Inference with Limited Memory",
+    "authors_year": "Kim et al., 2023",
+    "techniques": [
+      "Windowing",
+      "Row-column bundling",
+      "Strategic data transfer reduction",
+      "Context-adaptive loading",
+      "Sparsity awareness"
+    ],
+    "target_hardware": "Devices with limited DRAM capacity",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Efficiently run LLMs larger than DRAM by optimizing flash memory data transfer and access patterns",
+    "url": "https://arxiv.org/abs/2312.11514"
+  },
+  {
+    "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "Declarative configuration interface",
+      "Power measurement layer",
+      "Phase-aligned metrics pipeline"
+    ],
+    "target_hardware": "Varies, from 1B to 405B parameter models",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 405,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Inference power consumption dominates LLM service energy costs, requiring detailed measurement",
+    "url": "https://arxiv.org/abs/2512.03024"
+  },
+  {
+    "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+    "authors_year": "Microsoft Research et al., 2024",
+    "techniques": [
+      "Synthetic data training",
+      "Filtered web data",
+      "Model alignment",
+      "Parameter scaling"
+    ],
+    "target_hardware": "Mobile phones, low-resource devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3.8,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Compact 3.8B model rivals larger models while being deployable on mobile devices",
+    "url": "https://arxiv.org/abs/2404.14219"
+  },
+  {
+    "title": "Evaluating the Impact of Post-Training Quantization on Large Language Models for Code Generation",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Post-training quantization",
+      "Code-specific calibration dataset",
+      "Precision reduction from FP32 to INT4"
+    ],
+    "target_hardware": "Not specified in abstract",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 34,
+    "quantization": "INT4, 2-bit to 4-bit precision",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "4-bit quantization reduces memory footprint by 70% with minimal performance loss",
+    "url": "https://arxiv.org/html/2503.07103v2"
+  },
+  {
+    "title": "Extreme Compression of Large Language Models via Additive Quantization",
+    "authors_year": "Aghajanyan et al., 2024",
+    "techniques": [
+      "Additive Quantization (AQ)",
+      "Multi-Codebook Quantization (MCQ)",
+      "Input-adaptive learned weight matrix quantization",
+      "Joint codebook parameter optimization across transformer blocks"
+    ],
+    "target_hardware": "GPU and CPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "2-3 bits per parameter",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Additive quantization enables extreme LLM compression with minimal accuracy loss",
+    "url": "https://arxiv.org/html/2401.06118v3"
+  },
+  {
+    "title": "A Comprehensive Survey of Small Language Models in the Era of Large Language Models",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Small Language Models (SLMs)",
+      "Resource-constrained optimization",
+      "Domain-specific model adaptation"
+    ],
+    "target_hardware": "Edge devices, resource-limited environments",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Small Language Models enable efficient, privacy-preserving AI on resource-constrained devices.",
+    "url": "https://arxiv.org/html/2411.03350v1"
+  },
+  {
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "authors_year": "Facebook Research et al., 2024",
+    "techniques": [
+      "Model compression",
+      "Sub-billion parameter optimization",
+      "On-device inference"
+    ],
+    "target_hardware": "Mobile and embedded devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 1,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Optimize small language models for efficient on-device deployment across mobile platforms",
+    "url": "https://github.com/facebookresearch/MobileLLM"
+  },
+  {
+    "title": "AndesVL Technical Report: An Efficient Mobile-side Multimodal Large Language Model",
+    "authors_year": "AndesVL et al., 2024",
+    "techniques": [
+      "1+N LoRA architecture",
+      "Quantization-Aware LoRA Fine-Tuning (QALFT)",
+      "OKV cache eviction algorithm",
+      "Speculative decoding",
+      "Compression strategies"
+    ],
+    "target_hardware": "MediaTek Dimensity 9500 chips, mobile devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 4,
+    "quantization": "1.8 bits-per-weight",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient mobile-side MLLMs with compact 0.6B-4B models for edge device deployment",
+    "url": "https://huggingface.co/OPPOer"
+  },
+  {
+    "title": "Performance of llama.cpp on Snapdragon X Elite/Plus",
+    "authors_year": "GitHub Community, 2024",
+    "techniques": [],
+    "target_hardware": "Qualcomm Snapdragon X Elite/Plus",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": null,
+    "url": "https://github.com/ggml-org/llama.cpp/discussions/8273"
+  },
+  {
+    "title": "Accelerating Phi-2, CodeLlama, Gemma and other Gen AI models with ONNX Runtime",
+    "authors_year": "ONNX Runtime Team, 2024",
+    "techniques": [
+      "ONNX Runtime optimizations",
+      "Model quantization",
+      "Inference acceleration"
+    ],
+    "target_hardware": "Intel CPUs and integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 2.7,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "ONNX Runtime provides efficient inference optimizations for generative AI models",
+    "url": "https://onnxruntime.ai/blogs/accelerating-phi-2"
+  },
+  {
+    "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+    "authors_year": "Microsoft Research, 2024",
+    "techniques": [
+      "On-device model compression",
+      "Efficient transformer architecture",
+      "Quality-driven training data selection"
+    ],
+    "target_hardware": "Mobile devices, low-resource compute environments",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 2.5,
+    "model_size_b": 3,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Compact language models can achieve high performance with carefully curated training data",
+    "url": "https://arxiv.org/abs/2404.06761"
+  },
+  {
+    "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+    "authors_year": "Microsoft Research, 2024",
+    "techniques": [
+      "dataset filtering",
+      "synthetic data training",
+      "model alignment"
+    ],
+    "target_hardware": "Mobile devices, phones, low-resource compute",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3.8,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "High-performance 3.8B model trained on filtered web and synthetic data for local deployment",
+    "url": "https://www.microsoft.com/en-us/research/publication/phi-3-technical-report-a-highly-capable-language-model-locally-on-your-phone"
+  },
+  {
+    "title": "ExLlama V2: Fast LLM Inference Library",
+    "authors_year": "Turboderp, 2023",
+    "techniques": [
+      "Optimized matrix multiplication",
+      "GPU-accelerated quantization",
+      "Dynamic quantization",
+      "Low-memory inference strategies"
+    ],
+    "target_hardware": "Consumer-class GPUs, desktop/laptop systems",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Dynamic quantization modes",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient local LLM inference on consumer hardware through optimized quantization techniques",
+    "url": "https://github.com/turboderp-org/exllamav2"
+  },
+  {
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "authors_year": "Chen et al., 2024",
+    "techniques": [
+      "Activation-aware Weight Quantization",
+      "Selective Weight Quantization",
+      "Per-channel Quantization"
+    ],
+    "target_hardware": "Various GPUs, CPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Strategically quantize weights by considering activation patterns to minimize accuracy loss.",
+    "url": "https://github.com/mit-han-lab/llm-awq"
+  },
+  {
+    "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "authors_year": "Xiao et al., 2022",
+    "techniques": [
+      "Post-training quantization",
+      "Activation outlier smoothing",
+      "Weight and activation quantization migration"
+    ],
+    "target_hardware": "General compute hardware, demonstrated on multiple LLM architectures",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 530,
+    "quantization": "W8A8 (8-bit weights, 8-bit activations)",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Migrate quantization difficulty from activations to weights to enable efficient INT8 quantization",
+    "url": "https://arxiv.org/abs/2211.10438"
+  },
+  {
+    "title": "T-MAC: Low-bit LLM inference on CPU/NPU with lookup table",
+    "authors_year": "Microsoft et al., 2024",
+    "techniques": [
+      "Low-bit quantization",
+      "Lookup table optimization",
+      "CPU/NPU inference acceleration"
+    ],
+    "target_hardware": "Intel CPUs, NPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Low-bit quantization",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient low-bit quantization and lookup table technique for LLM inference on CPUs",
+    "url": "https://github.com/microsoft/t-mac"
+  },
+  {
+    "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+    "authors_year": "Frantar et al., 2023",
+    "techniques": [
+      "One-shot pruning",
+      "Unstructured sparsity",
+      "Semi-structured sparsity",
+      "Weight pruning without retraining"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Large GPT models can be pruned to 50% sparsity in one-shot without retraining",
+    "url": "https://arxiv.org/abs/2301.00774"
+  },
+  {
+    "title": "Universal LLM Deployment Engine with ML Compilation",
+    "authors_year": "MLC-AI Team, 2023",
+    "techniques": [
+      "Machine Learning Compilation",
+      "Model Optimization",
+      "Runtime Acceleration",
+      "Cross-Platform Inference"
+    ],
+    "target_hardware": "Multiple platforms (laptops, mobile, GPUs)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "ML compilation enables efficient cross-platform LLM inference with minimal performance overhead",
+    "url": "https://github.com/mlc-ai/mlc-llm"
+  },
+  {
+    "title": "On-Device Language Models: A Comprehensive Review",
+    "authors_year": "NexaAI et al., 2024",
+    "techniques": [
+      "parameter sharing",
+      "modular designs",
+      "quantization",
+      "pruning",
+      "knowledge distillation"
+    ],
+    "target_hardware": "Mobile/edge devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Efficient LLMs on edge devices require innovative compression and architectural optimization techniques",
+    "url": "https://github.com/NexaAI/Awesome-LLMs-on-device"
+  },
+  {
+    "title": "Universal LLM Deployment Engine with ML Compilation",
+    "authors_year": "MLC Team, 2023",
+    "techniques": [
+      "Machine Learning Compilation",
+      "Model optimization",
+      "Hardware-aware inference"
+    ],
+    "target_hardware": "Laptops, desktops, mobile devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "ML compilation enables efficient LLM deployment across diverse hardware platforms",
+    "url": "https://github.com/mlc-ai/mlc-llm/blob/main/docs/install/tvm.rst"
+  },
+  {
+    "title": "Quantized KV Cache - vLLM",
+    "authors_year": "vLLM Team, 2024",
+    "techniques": [
+      "FP8 KV cache quantization",
+      "Flash Attention 3 quantized backend",
+      "Query-key-value quantization"
+    ],
+    "target_hardware": "General compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "FP8",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantizing KV cache to FP8 reduces memory footprint and enables longer context windows",
+    "url": "https://docs.vllm.ai/en/v0.16.0/features/quantization/quantized_kvcache"
+  },
+  {
+    "title": "Large Language Model Inference Acceleration: A Comprehensive Hardware Perspective",
+    "authors_year": null,
+    "techniques": [
+      "hardware platform optimization",
+      "inference acceleration",
+      "edge intelligence optimization"
+    ],
+    "target_hardware": "CPU, GPU, FPGA, ASIC, PIM/NDP",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Different hardware platforms have unique characteristics that can improve LLM inference performance.",
+    "url": null
+  },
+  {
+    "title": "ExLlama: Memory-Efficient Llama Inference",
+    "authors_year": "turboderp et al., 2023",
+    "techniques": [
+      "Quantized weight optimization",
+      "Memory-efficient transformer implementation"
+    ],
+    "target_hardware": "Consumer GPUs, laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Optimized transformer implementation reduces memory overhead for quantized Llama models",
+    "url": "https://github.com/turboderp/exllama"
+  },
+  {
+    "title": "LM Studio Docs",
+    "authors_year": "LM Studio Team, 2023",
+    "techniques": [
+      "local LLM inference",
+      "model compatibility"
+    ],
+    "target_hardware": "Consumer laptops with integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Run various open-source LLMs locally with minimal hardware requirements",
+    "url": "https://lmstudio.ai/docs/app"
+  },
+  {
+    "title": "LM Studio - Discover, download, and run local LLMs",
+    "authors_year": "LM Studio Team, 2023",
+    "techniques": [],
+    "target_hardware": "Personal laptops with Intel CPUs and integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Easy-to-use local LLM platform for running AI models on consumer hardware",
+    "url": "https://lmstudio.ai/home"
+  },
+  {
+    "title": "NeurIPS Competition Edge-LLMs: Edge-Device Large Language Model Competition",
+    "authors_year": "NeurIPS et al., 2024",
+    "techniques": [
+      "INT8 quantization",
+      "Memory optimization",
+      "Energy-efficient model deployment"
+    ],
+    "target_hardware": "Edge devices, smartphones, resource-constrained systems",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 20,
+    "model_size_b": 10,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Develop LLMs that can efficiently run on devices with limited computing and memory resources",
+    "url": "https://neurips.cc/virtual/2024/competition/84790"
+  },
+  {
+    "title": "Edge-Device Large Language Model Competition",
+    "authors_year": null,
+    "techniques": [],
+    "target_hardware": "Smartphones, IoT devices, in-car systems",
+    "benchmark_toks_per_sec": 10,
+    "memory_footprint_gb": 20,
+    "model_size_b": 10,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "LLM deployment on edge devices is challenging due to memory and energy constraints.",
+    "url": "https://edge-llms-challenge.github.io/edge-llm-challenge.github.io"
+  },
+  {
+    "title": "Model Quantization Guide: Run 70B LLMs in 4 Bits — INT8, GPTQ, AWQ & GGUF",
+    "authors_year": "Anonymous et al., 2026",
+    "techniques": [
+      "INT8",
+      "GPTQ",
+      "AWQ",
+      "NF4",
+      "GGUF"
+    ],
+    "target_hardware": "Consumer GPUs, Intel laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": "INT8, INT4, Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantization techniques enable running large language models on consumer hardware",
+    "url": "https://www.meta-intelligence.tech/en/insight-quantization.html"
+  },
+  {
+    "title": "Ultimate Guide - The Fastest Small LLMs for Inference in 2026",
+    "authors_year": "Anonymous et al., 2026",
+    "techniques": [],
+    "target_hardware": "Intel i5/i7 laptops with integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 8,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Review of fastest small LLMs for efficient AI deployment on consumer hardware",
+    "url": "https://www.siliconflow.com/articles/en/fastest-small-LLMs-for-inference"
+  },
+  {
+    "title": "Inference Performance Optimization for Large Language Models on CPUs",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "KV cache size reduction",
+      "Distributed inference optimization",
+      "oneAPI Collective Communications Library optimization",
+      "Tailored model-specific optimizations"
+    ],
+    "target_hardware": "CPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": false,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Optimize LLM inference on CPUs by reducing KV cache size and using distributed optimization",
+    "url": "https://arxiv.org/abs/2407.07304"
+  },
+  {
+    "title": "Efficient LLM inference solution on Intel GPU",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Decoder layer operation fusion",
+      "Segment KV cache policy",
+      "Customized Scaled-Dot-Product-Attention kernel"
+    ],
+    "target_hardware": "Intel GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Fuse operations and optimize memory management to improve LLM inference efficiency",
+    "url": "https://arxiv.org/abs/2401.05391"
+  },
+  {
+    "title": "GPTQ: Accurate Post-training Quantization of Generative Pretrained Transformers",
+    "authors_year": "Frantar et al., 2023",
+    "techniques": [
+      "Post-training quantization",
+      "Layer-wise quantization",
+      "Optimal brain compression"
+    ],
+    "target_hardware": "General compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Precise layer-wise quantization can compress large language models with minimal accuracy loss.",
+    "url": "https://github.com/IST-DASLab/gptq"
+  },
+  {
+    "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "authors_year": "Han et al., 2023",
+    "techniques": [
+      "Post-training quantization",
+      "Channel-wise smoothing",
+      "Activation quantization optimization"
+    ],
+    "target_hardware": "Various computing platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Mitigate activation quantization error by smoothing scales across input channels",
+    "url": "https://github.com/mit-han-lab/smoothquant"
+  },
+  {
+    "title": "Accessible large language models via k-bit quantization for PyTorch",
+    "authors_year": "Dettmers et al., 2023",
+    "techniques": [
+      "k-bit quantization",
+      "8-bit and 4-bit quantization",
+      "Low-memory inference optimization"
+    ],
+    "target_hardware": "CPU, GPU, Mixed Precision Devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": "INT8, INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Reduce memory requirements of large language models through efficient k-bit quantization",
+    "url": "https://github.com/TimDettmers/bitsandbytes"
+  },
+  {
+    "title": "AutoAWQ: 4-bit Quantization for Faster LLM Inference",
+    "authors_year": "Hansen et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "AWQ algorithm"
+    ],
+    "target_hardware": "Various, including laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "AWQ enables 4-bit quantization with 2x inference speedup",
+    "url": "https://github.com/casper-hansen/AutoAWQ"
+  },
+  {
+    "title": "A detailed comparison between GPTQ, AWQ, EXL2, q4_K_M, q4_K_S, and load_in_4bit: perplexity, VRAM, speed, model size, and loading time",
+    "authors_year": "oobabooga, 2024",
+    "techniques": [
+      "4-bit quantization",
+      "model compression"
+    ],
+    "target_hardware": "Consumer laptops/hardware",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": [
+      "Q4_K_M",
+      "Q4_K_S",
+      "INT4"
+    ],
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Multiple quantization techniques enable large language models to run on consumer hardware",
+    "url": "https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp"
+  },
+  {
+    "title": "Performance of llama.cpp on Apple Silicon M-series",
+    "authors_year": "ggml-org, 2023",
+    "techniques": [
+      "Metal GPU acceleration",
+      "M-series chip optimization"
+    ],
+    "target_hardware": "Apple MacBooks with M-series chips",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Discussion about llama.cpp performance on Apple's custom ARM-based silicon",
+    "url": "https://github.com/ggml-org/llama.cpp/discussions/4167"
+  },
+  {
+    "title": "The case for 4-bit precision: k-bit Inference Scaling Laws",
+    "authors_year": "Unknown et al., 2022",
+    "techniques": [
+      "k-bit quantization",
+      "small block size quantization",
+      "zero-shot performance scaling"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "4-bit",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "4-bit precision is almost universally optimal for total model bits and zero-shot accuracy.",
+    "url": "https://arxiv.org/abs/2212.09720"
+  },
+  {
+    "title": "GPTQ-for-LLaMA: 4 bits quantization of LLaMA",
+    "authors_year": "qwopqwop200 et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "GPTQ (Generative Post-Training Quantization)"
+    ],
+    "target_hardware": "CPU/GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantize LLaMA models to 4-bit precision to reduce memory and computational requirements",
+    "url": "https://github.com/qwopqwop200/GPTQ-for-LLaMA"
+  },
+  {
+    "title": "Optimizing LLMs Using Quantization For Mobile Execution",
+    "authors_year": "Unspecified et al., 2024",
+    "techniques": [
+      "Post-Training Quantization (PTQ)",
+      "4-bit Quantization",
+      "GGUF Model Conversion"
+    ],
+    "target_hardware": "Android mobile device",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "4-bit quantization reduces LLM model size by 68.66%, enabling mobile device deployment",
+    "url": "https://arxiv.org/html/2512.06490v1"
+  },
+  {
+    "title": "Pushing the Envelope of LLM Inference on AI-PC and Intel GPUs",
+    "authors_year": "Unspecified et al., 2024",
+    "techniques": [
+      "Ultra-low-bit quantization (1-bit, 2-bit models)",
+      "Optimized microkernels for CPUs",
+      "Mixed precision GEMM kernels for Intel GPUs",
+      "Quantization plugin for vLLM framework"
+    ],
+    "target_hardware": "Intel CPUs, Intel Xe GPUs, AI PCs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "1-bit, 2-bit",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Ultra-low-bit quantization enables efficient LLM inference on resource-constrained devices",
+    "url": null
+  },
+  {
+    "title": "Challenging GPU Dominance: When CPUs Outperform for On-Device LLM Inference",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "llama.cpp deployment",
+      "thread optimization",
+      "CPU thread configuration",
+      "precision tuning",
+      "quantization strategies"
+    ],
+    "target_hardware": "iPhone 15 Pro, mobile devices",
+    "benchmark_toks_per_sec": 17,
+    "memory_footprint_gb": null,
+    "model_size_b": 1,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": true,
+    "key_insight": "CPU can outperform GPU for LLM inference by optimizing thread configuration and precision",
+    "url": "https://arxiv.org/html/2505.06461v1"
+  },
+  {
+    "title": "ggml: add Flash Attention",
+    "authors_year": "ggerganov, 2023",
+    "techniques": [
+      "Flash Attention"
+    ],
+    "target_hardware": "Generic CPU/GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient attention mechanism for improving LLM inference performance",
+    "url": "https://github.com/ggml-org/llama.cpp/pull/5021"
+  },
+  {
+    "title": "Quantize What Counts: More for Keys, Less for Values",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Mixed-precision KV cache quantization",
+      "Asymmetric bit allocation for keys and values",
+      "Transformer model geometry-based quantization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Mixed-precision (e.g., 4-bit keys, 2-bit values)",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Prioritizing key precision over value precision reduces quantization error in LLMs",
+    "url": "https://arxiv.org/abs/2502.15075"
+  },
+  {
+    "title": "On-Device LLMs: State of the Union, 2026",
+    "authors_year": "Vikas Chandra, 2026",
+    "techniques": [
+      "model compression",
+      "model deployment optimization"
+    ],
+    "target_hardware": "Mobile devices, personal laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 1,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Running large language models on devices requires rethinking model compression and deployment strategies.",
+    "url": "https://v-chandra.github.io/on-device-llms"
+  },
+  {
+    "title": "Joules-per-bit at the edge: Bounding and auditing LLM inference energy with RAPL telemetry and FLOPs-to-J models",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Intel RAPL energy counters",
+      "FLOPs-to-J energy modeling",
+      "Quantization of LLaMA models",
+      "Information-theoretic energy normalization"
+    ],
+    "target_hardware": "SWaP-constrained platforms, CPU-only",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "LLaMA-family quantization",
+    "applicable_to_intel_igpu": false,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Measure LLM inference energy using RAPL counters without external power meters",
+    "url": "https://spie.org/defense-security/presentation/Joules-per-bit-at-the-edge--Bounding-and-auditing/14043-34"
+  },
+  {
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "authors_year": "Frantar et al., 2022",
+    "techniques": [
+      "One-shot weight quantization",
+      "Approximate second-order information quantization",
+      "Post-training model compression"
+    ],
+    "target_hardware": "NVIDIA A100, NVIDIA A6000 GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": "INT3, INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantize large language models to 3-4 bits with minimal accuracy loss",
+    "url": "https://arxiv.org/abs/2210.17323"
+  },
+  {
+    "title": "LittleBit: Ultra Low-Bit Quantization via Latent Factorization",
+    "authors_year": "Samsung Labs et al., 2024",
+    "techniques": [
+      "Latent matrix factorization",
+      "Multi-scale compensation mechanism",
+      "Dual Sign-Value-Independent Decomposition (Dual-SVID)",
+      "Residual Compensation"
+    ],
+    "target_hardware": "Resource-constrained devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 0.9,
+    "model_size_b": 13,
+    "quantization": "0.1 Bits Per Weight (BPW)",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Extreme model compression via latent factorization and multi-scale compensation mechanism",
+    "url": "https://github.com/SamsungLabs/LittleBit"
+  },
+  {
+    "title": "A Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using transformers, accelerate and bitsandbytes",
+    "authors_year": "Unknown et al., 2023",
+    "techniques": [
+      "8-bit matrix multiplication",
+      "transformers",
+      "bitsandbytes"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Democratize AI through open source techniques for efficient transformer scaling",
+    "url": "https://huggingface.co/blog/hf-bitsandbytes-integration"
+  },
+  {
+    "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+    "authors_year": "Lin et al., 2023",
+    "techniques": [
+      "Retention mechanism",
+      "Three computation paradigms (parallel, recurrent, chunkwise recurrent)",
+      "Low-cost O(1) inference",
+      "Efficient long-sequence modeling"
+    ],
+    "target_hardware": "GPU, but with focus on efficient inference",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Retention mechanism enables parallel training, low-cost inference, and efficient long-sequence modeling",
+    "url": "https://arxiv.org/abs/2307.08621"
+  },
+  {
+    "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+    "authors_year": "Ainslie et al., 2023",
+    "techniques": [
+      "Multi-query attention (MQA)",
+      "Grouped-query attention (GQA)",
+      "Model uptraining"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Efficiently adapt existing multi-head models to faster inference with minimal retraining",
+    "url": "https://arxiv.org/abs/2305.13245"
+  },
+  {
+    "title": "A Survey of Linear Attention: Algorithm, Theory, Application, and Infrastructure",
+    "authors_year": "Bai et al., 2024",
+    "techniques": [
+      "Linear Attention",
+      "Linear Transformer",
+      "Attention Optimization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Linear attention techniques can improve transformer efficiency across algorithms, theory, and infrastructure.",
+    "url": "https://github.com/btzyd/Awesome-Linear-Attention-Survey"
+  },
+  {
+    "title": "NIRVANA: Structured pruning reimagined for large language models compression",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "First-order saliency criterion",
+      "Neural Tangent Kernel optimization",
+      "Adaptive sparsity allocation",
+      "KL divergence-based calibration data selection"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Novel pruning method balances zero-shot accuracy and fine-tuning capability for LLM compression",
+    "url": "https://arxiv.org/abs/2509.14230"
+  },
+  {
+    "title": "Teaching Tiny Minds: Exploring Methods to Enhance Knowledge Distillation for Small Language Models",
+    "authors_year": "Authors et al., 2024",
+    "techniques": [
+      "Knowledge Distillation",
+      "Contrastive Loss",
+      "Adversarial Loss",
+      "Compact Model Design"
+    ],
+    "target_hardware": "Not specified in abstract",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 0.044,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Small language models can achieve competitive performance through advanced knowledge distillation techniques",
+    "url": "https://aclanthology.org/2024.conll-babylm.27"
+  },
+  {
+    "title": "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory",
+    "authors_year": "Kim et al., 2024",
+    "techniques": [
+      "Computational offloading",
+      "Dynamic loading of model weights",
+      "Memory-efficient inference strategies"
+    ],
+    "target_hardware": "Low-memory consumer devices (laptops, desktops)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Innovative techniques enable efficient LLM inference on memory-constrained systems",
+    "url": "https://machinelearning.apple.com/research/efficient-large-language"
+  },
+  {
+    "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "Pyramidal Information Funneling",
+      "Dynamic KV cache compression",
+      "Layer-adaptive KV cache allocation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "LLMs aggregate information pyramidally, enabling dynamic KV cache compression across layers",
+    "url": "https://arxiv.org/abs/2406.02069"
+  },
+  {
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "authors_year": "Kwon et al., 2023",
+    "techniques": [
+      "PagedAttention",
+      "KV cache memory optimization",
+      "dynamic memory sharing"
+    ],
+    "target_hardware": "Not specified for Intel laptop/GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "PagedAttention enables near-zero waste in KV cache memory through virtual memory-inspired techniques.",
+    "url": "https://arxiv.org/abs/2309.06180"
+  },
+  {
+    "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference",
+    "authors_year": "TokenPowerBench et al., 2024",
+    "techniques": [
+      "Phase-aligned metrics pipeline",
+      "Power consumption measurement across GPU/node/system levels",
+      "Declarative configuration interface",
+      "Batch size and context length variation"
+    ],
+    "target_hardware": "Various hardware configurations, including GPU systems",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 405,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "First lightweight benchmark for measuring LLM inference power consumption across different configurations.",
+    "url": "https://arxiv.org/html/2512.03024v1"
+  },
+  {
+    "title": "Characterizing LLM Inference Energy-Performance Tradeoffs across Workloads and GPU Scaling",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Dynamic voltage and frequency scaling (DVFS)",
+      "Workload-aware model selection",
+      "Phase-aware GPU frequency optimization"
+    ],
+    "target_hardware": "GPU (unspecified)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 32,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Lightweight semantic features predict inference difficulty better than input length",
+    "url": "https://arxiv.org/html/2501.08219v4"
+  },
+  {
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "authors_year": "Chen et al., 2022",
+    "techniques": [
+      "Speculative decoding",
+      "Parallel token generation",
+      "Approximation models",
+      "Speculative execution"
+    ],
+    "target_hardware": "Not specifically mentioned",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Generate multiple tokens in parallel using approximation models to accelerate large transformer inference.",
+    "url": "https://arxiv.org/abs/2211.17192"
+  },
+  {
+    "title": "SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Speculative decoding",
+      "Adaptive candidate length determination",
+      "Acceptance probability prediction",
+      "Markov Decision Process optimization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Adaptively determine token candidate length by predicting token acceptance probability during inference",
+    "url": "https://icml.cc/virtual/2024/39629"
+  },
+  {
+    "title": "llama.cpp - Qwen",
+    "authors_year": "llama.cpp Contributors, 2023",
+    "techniques": [
+      "Quantization",
+      "Model compression",
+      "Local inference optimization"
+    ],
+    "target_hardware": "Consumer laptops, personal computers",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4, Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Efficient local LLM inference using quantization and model compression techniques",
+    "url": "https://qwen.readthedocs.io/en/latest/quantization/llama.cpp.html"
+  },
+  {
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "authors_year": "Li et al., 2024",
+    "techniques": [
+      "KV cache compression",
+      "Feature clustering",
+      "Attention head feature selection",
+      "Observation window extraction"
+    ],
+    "target_hardware": "A100-80GB GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Attention heads consistently focus on specific features, which can be compressed from an observation window.",
+    "url": "https://arxiv.org/pdf/2404.14469.pdf"
+  },
+  {
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "authors_year": "Kwon et al., 2023",
+    "techniques": [
+      "PagedAttention",
+      "Efficient KV cache management",
+      "Memory fragmentation reduction"
+    ],
+    "target_hardware": "GPU (primarily A100)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 13,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Optimize KV cache memory management to improve LLM serving efficiency",
+    "url": "https://doi.org/10.1145/3600006.3613165"
+  },
+  {
+    "title": "The Price of Prompting: Profiling Energy Use in Large Language Models Inference",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "MELODI framework",
+      "Process-level CPU monitoring via Scaphandre",
+      "GPU tracking via nvidia-smi",
+      "Configurable temporal buffers"
+    ],
+    "target_hardware": "Laptops, workstations",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Large models consume significantly more energy per token, with response length strongly predicting energy use.",
+    "url": "https://arxiv.org/html/2407.16893v2"
+  },
+  {
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "authors_year": "Leviathan et al., 2023",
+    "techniques": [
+      "Speculative Sampling",
+      "Speculative Execution",
+      "Parallel Token Decoding"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Decode multiple tokens in parallel by predicting easier tokens faster than serial decoding",
+    "url": "https://icml.cc/media/icml-2023/Slides/25546_yAOj5U8.pdf"
+  },
+  {
+    "title": "A Survey of RWKV",
+    "authors_year": "RWKV Authors et al., 2024",
+    "techniques": [
+      "Receptance Weighted Key Value (RWKV) architecture",
+      "Recurrent neural network design",
+      "Long-range dependency capture",
+      "Computational efficiency optimization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "RWKV merges recurrent and attention architectures for efficient long-sequence processing",
+    "url": "https://github.com/MLGroupJLU/RWKV-Survey"
+  },
+  {
+    "title": "Efficient Knowledge Distillation: Empowering Small Language Models with Teacher Model Insights",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Knowledge distillation",
+      "Token attribution scoring",
+      "Saliency map token extraction"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Distill knowledge from teacher model by extracting and transferring most influential input tokens",
+    "url": null
+  },
+  {
+    "title": "Speeding up Model Loading with fastsafetensors",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "direct device memory tensor instantiation",
+      "parallelized copying",
+      "peer-to-peer DMA",
+      "GPU offloading"
+    ],
+    "target_hardware": "Not specifically specified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 176,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Directly instantiate tensors in device memory to improve model loading performance",
+    "url": "https://arxiv.org/html/2505.23072v1"
+  },
+  {
+    "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+    "authors_year": "Zhang et al., 2024",
+    "techniques": [
+      "Pyramidal Information Funneling",
+      "Dynamic KV Cache Compression"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "LLMs aggregate information pyramidally, enabling dynamic KV cache compression with layer-specific allocation.",
+    "url": "https://arxiv.org/html/2406.02069v1"
+  },
+  {
+    "title": "The Pitfalls of KV Cache Compression",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "KV cache compression",
+      "KV cache eviction policy modification"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "KV cache compression can cause instruction degradation and system prompt leakage",
+    "url": "https://arxiv.org/abs/2510.00231"
+  },
+  {
+    "title": "Investigating Energy Efficiency and Performance Trade-offs in LLM Inference Across Tasks and DVFS Settings",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "Dynamic Voltage Frequency Scaling (DVFS)",
+      "Performance benchmarking across model architectures",
+      "Task-specific energy efficiency analysis"
+    ],
+    "target_hardware": "Not explicitly specified for Intel i5/i7",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Optimizing LLM parameters and hardware techniques can reduce energy consumption while maintaining performance",
+    "url": null
+  },
+  {
+    "title": "Understanding Large Language Models in Your Pockets: Performance Study on COTS Mobile Devices",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "local deployment",
+      "lightweight LLM evaluation"
+    ],
+    "target_hardware": "Mobile smartphones, mobile SoCs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Local LLM deployment enables privacy control and performance evaluation across mobile platforms",
+    "url": "https://arxiv.org/html/2410.03613v5"
+  },
+  {
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "authors_year": "Chen et al., 2024",
+    "techniques": [
+      "Multiple decoding heads",
+      "Tree-based attention mechanism",
+      "Parallel token prediction",
+      "Self-distillation",
+      "Typical acceptance scheme"
+    ],
+    "target_hardware": "Not specifically specified for Intel laptop/iGPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Use multiple parallel decoding heads to predict tokens simultaneously and reduce inference steps",
+    "url": "https://arxiv.org/abs/2401.10774"
+  },
+  {
+    "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+    "authors_year": "Zhang et al., 2024",
+    "techniques": [
+      "Speculative sampling",
+      "Feature-level autoregression",
+      "Second-to-top-layer prediction"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Autoregression at feature level can improve LLM inference efficiency by resolving prediction uncertainty.",
+    "url": "https://arxiv.org/abs/2401.15077"
+  },
+  {
+    "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+    "authors_year": "Zhang et al., 2024",
+    "techniques": [
+      "Context-aware dynamic draft tree",
+      "Speculative sampling",
+      "Draft model calibration"
+    ],
+    "target_hardware": "Not specifically specified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Draft token acceptance rates depend on context, not just position.",
+    "url": "https://arxiv.org/abs/2406.16858"
+  },
+  {
+    "title": "Quantizing Large Language Models for Code Generation: A Differentiated Replication",
+    "authors_year": "Wei et al., 2024",
+    "techniques": [
+      "Model quantization",
+      "Precision reduction",
+      "Code-specific calibration datasets"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 34,
+    "quantization": "INT4, INT3, INT2",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "4-bit quantization reduces memory footprint by 70% with minimal performance loss",
+    "url": null
+  },
+  {
+    "title": "Efficient Attention Mechanisms for Large Language Models: A Survey",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Linear attention methods",
+      "Kernel approximations",
+      "Recurrent formulations",
+      "Fast-weight dynamics",
+      "Sparse attention techniques",
+      "Token subset selection",
+      "Block-wise routing",
+      "Clustering strategies"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Efficient attention mechanisms aim to reduce quadratic complexity of transformer self-attention.",
+    "url": "https://arxiv.org/html/2507.19595v1"
+  },
+  {
+    "title": "RWKV-X: A Linear Complexity Hybrid Language Model",
+    "authors_year": "Hou et al., 2024",
+    "techniques": [
+      "Linear complexity architecture",
+      "Sparse attention mechanism",
+      "Hybrid RWKV design"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "RWKV-X achieves linear-time complexity with sparse attention for long-context modeling",
+    "url": "https://github.com/howard-hou/RWKV-X"
+  },
+  {
+    "title": "Small Models Struggle to Learn from Strong Reasoners",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Mix Distillation",
+      "Chain-of-Thought Reasoning",
+      "Reasoning Complexity Balancing"
+    ],
+    "target_hardware": "General CPU/GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Small models perform better with simpler reasoning chains than direct distillation from large models.",
+    "url": null
+  },
+  {
+    "title": "LLM in a flash: Efficient Large Language Model Inference with Limited Memory",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "windowing",
+      "row-column bundling",
+      "context-adaptive loading",
+      "sparsity awareness"
+    ],
+    "target_hardware": "Devices with limited DRAM",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 2,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Store large model parameters in flash memory, load on-demand to maximize inference efficiency",
+    "url": "https://arxiv.org/html/2312.11514v2"
+  },
+  {
+    "title": "LLM in a flash: Efficient Large Language Model Inference with Limited Memory",
+    "authors_year": "Alizadeh et al., 2024",
+    "techniques": [
+      "windowing",
+      "row-column bundling",
+      "selective parameter loading",
+      "context-adaptive loading"
+    ],
+    "target_hardware": "Personal devices with limited DRAM",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": 14,
+    "model_size_b": 7,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Store LLM parameters in flash memory and load on-demand to overcome DRAM limitations",
+    "url": "https://aclanthology.org/2024.acl-long.678.pdf"
+  },
+  {
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "authors_year": "Dettmers et al., 2023",
+    "techniques": [
+      "4-bit NormalFloat (NF4) quantization",
+      "Double quantization",
+      "Paged optimizers",
+      "Low Rank Adapters (LoRA)"
+    ],
+    "target_hardware": "Single GPU (48GB)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 65,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantized low-rank adaptation enables efficient fine-tuning of large language models with minimal memory overhead.",
+    "url": "https://arxiv.org/abs/2305.14314"
+  },
+  {
+    "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+    "authors_year": "Gu et al., 2024",
+    "techniques": [
+      "State Space Duality (SSD) framework",
+      "Selective State Space Model (SSM) optimization",
+      "Matrix decomposition techniques"
+    ],
+    "target_hardware": "Not explicitly specified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "SSMs and Transformers are closely related through structured matrix decompositions",
+    "url": "https://arxiv.org/abs/2405.21060"
+  },
+  {
+    "title": "A Simple and Effective Pruning Approach for Large Language Models",
+    "authors_year": "Liu et al., 2023",
+    "techniques": [
+      "Wanda pruning",
+      "weight magnitude pruning",
+      "input activation-based pruning"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Prune LLM weights by multiplying smallest magnitudes with corresponding input activations",
+    "url": "https://arxiv.org/abs/2306.11695"
+  },
+  {
+    "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Post-training sparsification",
+      "Weight matrix dimension reduction",
+      "Embeddings compression"
+    ],
+    "target_hardware": "24GB consumer GPUs, 40GB A100 GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Computational invariance in transformer networks enables efficient model parameter reduction",
+    "url": "https://arxiv.org/abs/2401.15024"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors_year": "Hu et al., 2021",
+    "techniques": [
+      "Low-Rank Adaptation",
+      "Rank Decomposition Matrices",
+      "Frozen Pre-trained Weights"
+    ],
+    "target_hardware": "Primarily GPU-based testing",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Reduce trainable parameters by 10,000x while maintaining model performance",
+    "url": "https://arxiv.org/abs/2106.09685"
+  },
+  {
+    "title": "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+    "authors_year": "Chen et al., 2023",
+    "techniques": [
+      "Self-speculative decoding",
+      "Layer skipping during drafting",
+      "Single forward pass verification"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Accelerate LLM inference by skipping layers during drafting and verifying in single pass",
+    "url": "https://arxiv.org/abs/2309.08168"
+  },
+  {
+    "title": "BitDistiller: A Novel QAT with Self-Distillation Framework for Ultra Low-Bit LLMs",
+    "authors_year": "OpenBitSys et al., 2024",
+    "techniques": [
+      "Quantization-Aware Training (QAT)",
+      "Self-Distillation",
+      "Ultra Low-Bit Quantization"
+    ],
+    "target_hardware": "Low-resource devices, potential laptop CPUs/GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Ultra Low-Bit (likely INT4 or lower)",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Self-distillation during QAT can improve performance of ultra low-bit LLM models",
+    "url": "https://github.com/DD-DuDa/BitDistiller"
+  },
+  {
+    "title": "MobileAIBench: Benchmarking LLMs and LMMs for On-Device Use Cases",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "model compression",
+      "quantization",
+      "mobile device optimization"
+    ],
+    "target_hardware": "Mobile devices, iOS platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Mobile LLMs require careful parameter reduction and compression to overcome hardware constraints.",
+    "url": "https://arxiv.org/abs/2406.10290"
+  },
+  {
+    "title": "SmoothQuant+: Accurate and Efficient 4-bit Post-Training Weight Quantization for LLM",
+    "authors_year": "Anonymous et al., 2023",
+    "techniques": [
+      "Post-training quantization (PTQ)",
+      "Channel-wise activation smoothing",
+      "Group-wise 4-bit weight quantization",
+      "Weight-activation mathematical equivalence"
+    ],
+    "target_hardware": "A100 40GB GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 34,
+    "quantization": "W4A16",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Smooth activation outliers before quantization to enable lossless 4-bit weight quantization",
+    "url": "https://arxiv.org/abs/2312.03788"
+  },
+  {
+    "title": "H₂O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+    "authors_year": "Anonymous et al., 2023",
+    "techniques": [
+      "KV cache optimization",
+      "Heavy Hitter (H₂) token retention",
+      "Dynamic submodular KV cache eviction"
+    ],
+    "target_hardware": "GPU, potentially applicable to CPU/integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 6.7,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "A small subset of tokens contribute most value in attention computation, enabling efficient caching",
+    "url": "https://arxiv.org/abs/2306.14048"
+  },
+  {
+    "title": "Decoding Speculative Decoding",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Speculative Decoding",
+      "Draft Model Token Generation",
+      "Hardware-Efficient Draft Models"
+    ],
+    "target_hardware": "Not specified in abstract",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 65,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Draft model latency matters more than language modeling capability for speculative decoding performance",
+    "url": "https://arxiv.org/abs/2402.01528"
+  },
+  {
+    "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "authors_year": "Gu et al., 2024",
+    "techniques": [
+      "Selective State Space Models (SSMs)",
+      "Input-dependent SSM parameters",
+      "Hardware-aware parallel recurrent algorithm",
+      "Architecture without attention or MLP blocks"
+    ],
+    "target_hardware": "Not explicitly specified, but suggests general hardware efficiency",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Content-based reasoning in SSMs enables efficient sequence modeling with linear computational complexity",
+    "url": "https://openreview.net/forum?id=tEYskw1VY2"
+  },
+  {
+    "title": "RWKV: Reinventing RNNs for the Transformer Era",
+    "authors_year": "Bo Peng et al., 2023",
+    "techniques": [
+      "RNN-transformer hybrid",
+      "parallelizable training",
+      "linear attention"
+    ],
+    "target_hardware": "CPUs, consumer GPUs, laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Combines RNN efficiency with transformer performance for faster, memory-efficient language models",
+    "url": "https://github.com/Blealtan/RWKV-LM-LoRA"
+  },
+  {
+    "title": "Refactor: llama-mmap.cpp",
+    "authors_year": "Anonymous, 2024",
+    "techniques": [
+      "memory mapping optimization",
+      "O_DIRECT interaction"
+    ],
+    "target_hardware": "Generic Intel laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Memory mapping interactions can improve low-resource LLM inference performance",
+    "url": "https://github.com/ggml-org/llama.cpp/issues/16180"
+  },
+  {
+    "title": "Language model compression with weighted low-rank factorization",
+    "authors_year": "Anonymous et al., 2022",
+    "techniques": [
+      "Fisher-Weighted SVD (FWSVD)",
+      "Low-rank matrix factorization",
+      "Parameter importance weighting"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Use Fisher information to weight matrix decomposition, preserving task accuracy during model compression",
+    "url": "https://arxiv.org/abs/2207.00112"
+  },
+  {
+    "title": "Draft, Verify, and Improve: Toward Training-Aware Speculative Decoding",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Speculative Decoding",
+      "Training-aware self-speculation",
+      "KL→RL learning schedule",
+      "Online distillation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Speculative decoding framework that combines inference with continual online learning",
+    "url": "https://arxiv.org/abs/2510.05421"
+  },
+  {
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "authors_year": "Leviathan et al., 2023",
+    "techniques": [
+      "Speculative Decoding",
+      "Token Draft and Verification"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Use a smaller model to draft tokens, then verify with a larger model to accelerate inference",
+    "url": "https://cseweb.ucsd.edu/~yiying/cse291a-fall25/reading/spec-decoding.pdf"
+  },
+  {
+    "title": "Speculative decoding potential for running big LLMs on consumer grade GPUs efficiently",
+    "authors_year": null,
+    "techniques": [
+      "speculative decoding"
+    ],
+    "target_hardware": "consumer grade GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Speculative decoding can help run large language models more efficiently on consumer GPUs",
+    "url": "https://github.com/ggml-org/llama.cpp/discussions/10466"
+  },
+  {
+    "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "speculative sampling",
+      "feature-level autoregression",
+      "multi-layer feature fusion",
+      "training-time test",
+      "direct token prediction"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Replace feature prediction with direct token prediction and multi-layer feature fusion to improve speculative sampling",
+    "url": "https://arxiv.org/abs/2503.01840"
+  },
+  {
+    "title": "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Knowledge distillation",
+      "On-policy data generation",
+      "Tailored divergence function",
+      "Speculative decoding"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Knowledge distillation can improve draft model alignment for faster speculative decoding",
+    "url": "https://openreview.net/forum?id=rsY6J3ZaTF"
+  },
+  {
+    "title": "Performance | onnxruntime",
+    "authors_year": "Microsoft et al., 2023",
+    "techniques": [
+      "Cross-platform acceleration",
+      "ML inference optimization",
+      "Hardware-specific optimizations"
+    ],
+    "target_hardware": "Multiple platforms (CPU, GPU, accelerators)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "High performance ML inference framework supporting multiple hardware platforms",
+    "url": "https://onnxruntime.ai/docs/performance"
+  },
+  {
+    "title": "Inference performance evaluation for LLMs on edge devices with a novel benchmarking framework and metric",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Memory Bandwidth Utilization (MBU) metric",
+      "Edge LLM Inference Benchmarking (ELIB) tool",
+      "Model quantization"
+    ],
+    "target_hardware": "Edge devices (mobile and PC)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Quantized models (specific type not specified)",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Novel benchmarking tool and metric to optimize LLM inference on memory-constrained edge platforms",
+    "url": null
+  },
+  {
+    "title": "PALMBENCH: A COMPREHENSIVE BENCHMARK OF COMPRESSED LARGE LANGUAGE MODELS ON MOBILE PLATFORMS",
+    "authors_year": "Not specified in excerpt, null",
+    "techniques": [
+      "model quantization",
+      "local deployment",
+      "performance optimization"
+    ],
+    "target_hardware": "Mobile devices with varying hardware capabilities",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "weights and activations quantization",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Local LLM deployment requires balancing quality, latency, and throughput within mobile device constraints",
+    "url": "https://openreview.net/forum?id=xzSUdw6s76"
+  },
+  {
+    "title": "Efficient Attention Mechanisms for Large Language Models: A Survey",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Linear attention kernel approximations",
+      "Recurrent attention formulations",
+      "Fast-weight dynamics",
+      "Sparse attention token selection",
+      "Block-wise attention routing",
+      "Token clustering strategies"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Efficient attention mechanisms can reduce quadratic complexity of transformers for scalable language models.",
+    "url": null
+  },
+  {
+    "title": "KV Cache Compression: Eviction, Quantization & H2O Algorithm",
+    "authors_year": "Brenndoerfer et al., 2024",
+    "techniques": [
+      "KV cache compression",
+      "Eviction strategies",
+      "Attention sinks",
+      "H2O algorithm",
+      "INT8 quantization"
+    ],
+    "target_hardware": "Consumer laptops with integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT8",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Compress key-value caches to improve memory efficiency for LLM inference on resource-constrained devices",
+    "url": "https://mbrenndoerfer.com/writing/kv-cache-compression-eviction-quantization-h2o-algorithm"
+  },
+  {
+    "title": "Awesome Quantization Papers",
+    "authors_year": "Zhen Dong et al., 2023",
+    "techniques": [
+      "Neural network quantization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Curated collection of research papers on neural network quantization techniques",
+    "url": "https://github.com/Zhen-Dong/Awesome-Quantization-Papers"
+  },
+  {
+    "title": "AMQ: Enabling AutoML for Mixed-precision Weight-Only Quantization of Large Language Models",
+    "authors_year": "Researchers et al., 2024",
+    "techniques": [
+      "Search space pruning",
+      "Quantization proxy",
+      "Quality predictor",
+      "Iterative search-and-update strategy"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Mixed-precision Weight-Only",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Automated mixed-precision quantization framework efficiently explores quality-efficiency tradeoffs in LLMs",
+    "url": "https://github.com/dlwns147/amq"
+  },
+  {
+    "title": "LLM Inference Optimization Paper Summary",
+    "authors_year": "Chen Hongyu, 2024",
+    "techniques": [
+      "Inference optimization techniques compilation"
+    ],
+    "target_hardware": "Unspecified general compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Curated collection of research papers addressing large language model inference optimization",
+    "url": "https://github.com/chenhongyu2048/LLM-inference-optimization-paper"
+  },
+  {
+    "title": "Efficient LLM Inference on CPUs",
+    "authors_year": "Anonymous et al., 2023",
+    "techniques": [
+      "INT4 weight-only quantization",
+      "Highly-optimized kernels",
+      "LLM runtime optimization"
+    ],
+    "target_hardware": "CPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Automatic INT4 quantization and optimized kernels enable efficient LLM inference on CPUs",
+    "url": "https://arxiv.org/abs/2311.00502"
+  },
+  {
+    "title": "Distributed Inference Performance Optimization for LLMs on CPUs",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "distributed computing",
+      "distributed inference optimization"
+    ],
+    "target_hardware": "5th Gen Intel Xeon Scalable Processors",
+    "benchmark_toks_per_sec": 7.14,
+    "memory_footprint_gb": null,
+    "model_size_b": 72,
+    "quantization": null,
+    "applicable_to_intel_igpu": false,
+    "applicable_to_cpu_only": true,
+    "key_insight": "Distributed computing mitigates memory constraints and improves LLM inference performance on CPUs",
+    "url": "https://arxiv.org/abs/2407.00029"
+  },
+  {
+    "title": "Exploiting Intel Advanced Matrix Extensions (AMX) for Large Language Model Inference",
+    "authors_year": null,
+    "techniques": [
+      "Intel Advanced Matrix Extensions (AMX)"
+    ],
+    "target_hardware": "Intel processors with AMX support",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": true,
+    "key_insight": "AMX can accelerate matrix computations for efficient LLM inference on Intel processors",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10538369"
+  },
+  {
+    "title": "Petals: Collaborative Inference and Fine-tuning of Large Models",
+    "authors_year": "Petals et al., 2022",
+    "techniques": [
+      "Collaborative inference",
+      "Distributed model serving",
+      "RAM offloading",
+      "Hidden state exposure"
+    ],
+    "target_hardware": "Consumer GPUs, collaborative computing environments",
+    "benchmark_toks_per_sec": 1,
+    "memory_footprint_gb": null,
+    "model_size_b": 176,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Collaborative computing enables large model inference on consumer hardware through distributed resources",
+    "url": "https://arxiv.org/abs/2209.01188"
+  },
+  {
+    "title": "AutoAWQ - vLLM",
+    "authors_year": "Unknown, 2024",
+    "techniques": [
+      "4-bit quantization",
+      "model compression"
+    ],
+    "target_hardware": "General compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantization reduces model precision to INT4, lowering memory usage and latency",
+    "url": "https://docs.vllm.ai/en/stable/features/quantization/auto_awq"
+  },
+  {
+    "title": "Hugging Face Transformers",
+    "authors_year": "Hugging Face et al., 2023",
+    "techniques": [
+      "model definition",
+      "inference optimization"
+    ],
+    "target_hardware": "General purpose CPUs and GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Flexible framework for defining and deploying machine learning models across modalities",
+    "url": "https://github.com/huggingface/transformers"
+  },
+  {
+    "title": "AutoAWQ: AWQ Algorithm for 4-bit Quantization",
+    "authors_year": "Hansen et al., 2023",
+    "techniques": [
+      "4-bit quantization",
+      "AWQ algorithm"
+    ],
+    "target_hardware": "Unspecified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "AWQ algorithm enables 4-bit quantization with 2x speedup during inference",
+    "url": "https://github.com/casper-hansen/AutoAWQ/releases"
+  },
+  {
+    "title": "A direct comparison between llama.cpp, AutoGPTQ, ExLlama, and transformers perplexities",
+    "authors_year": "Oobabooga et al., 2023",
+    "techniques": [
+      "quantization",
+      "model compression"
+    ],
+    "target_hardware": "Various CPUs and GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Comparing performance of different quantization and inference techniques for language models.",
+    "url": "https://oobabooga.github.io/blog/posts/perplexities"
+  },
+  {
+    "title": "Sparsegpt for Llama",
+    "authors_year": "Unknown, 2023",
+    "techniques": [
+      "sparsity",
+      "model compression"
+    ],
+    "target_hardware": "CPUs, laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Sparse pruning technique potentially reduces memory and computational requirements for Llama models",
+    "url": "https://github.com/ggerganov/llama.cpp/discussions/521"
+  },
+  {
+    "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+    "authors_year": "Frantar et al., 2023",
+    "techniques": [
+      "one-shot pruning",
+      "sparsity",
+      "model compression"
+    ],
+    "target_hardware": "Not specified in GitHub description",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Large language models can be accurately pruned in a single optimization pass",
+    "url": "https://github.com/IST-DASLab/sparsegpt"
+  },
+  {
+    "title": "Let LLM Tell What to Prune and How Much to Prune",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Structured pruning",
+      "Dynamic pruning ratios",
+      "Multi-module pruning",
+      "Intrinsic module importance quantification"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "LLM modules have varying importance, so pruning should dynamically adapt to each module's role",
+    "url": "https://icml.cc/virtual/2025/poster/43485"
+  },
+  {
+    "title": "DistiLLM: Towards Streamlined Distillation for Large Language Models",
+    "authors_year": "Kwon et al., 2024",
+    "techniques": [
+      "Knowledge Distillation",
+      "Model Compression"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Streamlined distillation approach to compress large language models efficiently",
+    "url": "https://github.com/jongwooko/distillm"
+  },
+  {
+    "title": "DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs",
+    "authors_year": "Jongwoo Ko et al., 2025",
+    "techniques": [
+      "Contrastive knowledge distillation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Contrastive learning improves knowledge transfer between large and small language models",
+    "url": "https://github.com/jongwooko/distillm-2"
+  },
+  {
+    "title": "On the Compression of Language Models for Code: An Empirical Study on CodeBERT",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "knowledge distillation",
+      "quantization",
+      "pruning"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "quantization",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Compression strategies impact language model efficiency differently across software engineering tasks.",
+    "url": "https://arxiv.org/abs/2412.13737"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors_year": "Hu et al., 2022",
+    "techniques": [
+      "Low-Rank Adaptation",
+      "Rank decomposition matrices",
+      "Freezing pre-trained weights"
+    ],
+    "target_hardware": "Not specified in given text",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Inject low-rank matrices into Transformer layers to drastically reduce trainable parameters",
+    "url": "https://www.microsoft.com/en-us/research/publication/lora-low-rank-adaptation-of-large-language-models"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors_year": "Hu et al., 2022",
+    "techniques": [
+      "Low-Rank Adaptation",
+      "Rank decomposition matrices",
+      "Freezing pre-trained weights"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Inject low-rank matrices to reduce trainable parameters while maintaining model performance",
+    "url": "https://www.microsoft.com/en-us/research/publication/lora-low-rank-adaptation-of-large-language-models/bibtex"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors_year": "Hu et al., 2021",
+    "techniques": [
+      "Low-Rank Adaptation",
+      "Rank decomposition matrices",
+      "Freezing pre-trained weights"
+    ],
+    "target_hardware": "GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 175,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Inject low-rank matrices into Transformer layers to reduce trainable parameters drastically",
+    "url": "https://openreview.net/forum?id=nZeVKeeFYf9"
+  },
+  {
+    "title": "A Comprehensive Evaluation of Quantized Instruction-Tuned Large Language Models: An Experimental Analysis up to 405B",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "GPTQ",
+      "AWQ",
+      "SmoothQuant",
+      "FP8 quantization"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 405,
+    "quantization": [
+      "INT4",
+      "FP8",
+      "Weight-only quantization"
+    ],
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Quantization performance varies significantly with model size, method, and bit-width.",
+    "url": "https://arxiv.org/html/2409.11055v1"
+  },
+  {
+    "title": "GGUF vs GPTQ vs AWQ Compared: Best Quantization 2026 | Local AI Master",
+    "authors_year": "AI Master, 2026",
+    "techniques": [
+      "Q4_K_M quantization",
+      "AWQ",
+      "GPTQ"
+    ],
+    "target_hardware": "Intel laptops, integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Q4_K_M, AWQ, GPTQ",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Different quantization methods balance performance and model quality for local AI",
+    "url": "https://localaimaster.com/blog/quantization-explained"
+  },
+  {
+    "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "post-training sparsification",
+      "parameter reduction",
+      "row/column deletion"
+    ],
+    "target_hardware": "24GB consumer GPUs, 40GB A100 GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 70,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Remove up to 25% model parameters while maintaining 90-99% zero-shot task performance",
+    "url": "https://openreview.net/forum?id=vXxardq6db"
+  },
+  {
+    "title": "Pruning Large Language Models by Identifying and Preserving Functional Networks",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "structured pruning",
+      "functional network identification",
+      "neuron preservation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Prune LLMs by identifying functional networks analogous to brain networks, preserving key neurons.",
+    "url": "https://github.com/WhatAboutMyStar/LLM_ACTIVATION"
+  },
+  {
+    "title": "Mmap faster than direct I/O for MoE models",
+    "authors_year": "GitHub Discussion, 2024",
+    "techniques": [
+      "memory-mapped file I/O"
+    ],
+    "target_hardware": "General laptop/desktop",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Memory-mapped file I/O can improve performance for large model loading",
+    "url": "https://github.com/ggml-org/llama.cpp/discussions/18758"
+  },
+  {
+    "title": "4-bit KV Cache",
+    "authors_year": "ggml-org contributors, 2024",
+    "techniques": [
+      "4-bit key-value cache quantization",
+      "reduced memory footprint",
+      "low-precision inference"
+    ],
+    "target_hardware": "Personal computers with limited RAM",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantizing key-value cache to 4-bit can significantly reduce memory usage during LLM inference.",
+    "url": "https://github.com/ggml-org/llama.cpp/discussions/5932"
+  },
+  {
+    "title": "Q4 cache: Add groupwise Hadamard transform",
+    "authors_year": "turboderp, 2024",
+    "techniques": [
+      "groupwise Hadamard transform",
+      "Q4 quantization"
+    ],
+    "target_hardware": "Consumer-class GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Q4",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Applying Hadamard transform to improve Q4 quantization for local LLM inference",
+    "url": "https://github.com/turboderp-org/exllamav2/commit/324404ebe4e3c4dd0447ffc1290c312de1df02be"
+  },
+  {
+    "title": "Support differentiated quantization of the KV cache",
+    "authors_year": null,
+    "techniques": [
+      "Differentiated KV cache quantization"
+    ],
+    "target_hardware": "General CPU/GPU systems",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "Differentiated key-value quantization",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Keys are more sensitive to quantization than values, suggesting different quantization strategies",
+    "url": "https://github.com/ollama/ollama/issues/10794"
+  },
+  {
+    "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+    "authors_year": "Mamba Team et al., 2024",
+    "techniques": [
+      "State Space Model (SSM) discretization",
+      "Complex-valued state update rule",
+      "Multi-input, multi-output (MIMO) formulation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 1.5,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Linear models improved through expressive recurrence and state tracking techniques",
+    "url": "https://arxiv.org/abs/2603.15569"
+  },
+  {
+    "title": "llama.cpp: The Ultimate Guide to Efficient LLM Inference and Applications",
+    "authors_year": null,
+    "techniques": [
+      "Model quantization",
+      "Low-precision inference",
+      "Optimized memory management"
+    ],
+    "target_hardware": "Intel laptops with integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Optimize LLM inference for resource-constrained environments using efficient techniques",
+    "url": "https://pyimagesearch.com/2024/08/26/llama-cpp-the-ultimate-guide-to-efficient-llm-inference-and-applications"
+  },
+  {
+    "title": "ONNX Runtime | Inference",
+    "authors_year": "ONNX Team, 2023",
+    "techniques": [
+      "cross-framework model conversion",
+      "hardware acceleration",
+      "multi-language API support"
+    ],
+    "target_hardware": "Multiple platforms (cloud, edge, mobile, browsers)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Unified inference solution across frameworks and hardware platforms",
+    "url": "https://onnxruntime.ai/inference"
+  },
+  {
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "authors_year": "Chen et al., 2024",
+    "techniques": [
+      "KV cache compression",
+      "Attention head feature clustering",
+      "Automatic KV position selection"
+    ],
+    "target_hardware": "A100-80GB GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Compress KV cache by selecting important attention head positions from observation window",
+    "url": "https://arxiv.org/abs/2404.14469"
+  },
+  {
+    "title": "Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads",
+    "authors_year": "FasterDecoding et al., 2024",
+    "techniques": [
+      "multiple decoding heads",
+      "parallel token generation"
+    ],
+    "target_hardware": "General GPU/CPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Use multiple speculative decoding heads to accelerate token generation in large language models",
+    "url": "https://github.com/FasterDecoding/Medusa"
+  },
+  {
+    "title": "Jakiro: Boosting Speculative Decoding with Decoupled Multi-Head via MoE",
+    "authors_year": "Haiduo et al., 2024",
+    "techniques": [
+      "Mixture of Experts (MoE)",
+      "Decoupled multi-head prediction",
+      "Hybrid inference strategy",
+      "Contrastive feature mechanism"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Use diverse expert predictions to improve token prediction accuracy in speculative decoding",
+    "url": "https://github.com/haiduo/Jakiro"
+  },
+  {
+    "title": "Distillation and Refinement of Reasoning in Small Language Models for Document Re-ranking",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "knowledge distillation",
+      "reinforcement learning optimization",
+      "reasoning-focused training",
+      "self-supervised explanation generation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Small language models can achieve high performance through targeted reasoning and knowledge distillation",
+    "url": "https://arxiv.org/abs/2504.03947"
+  },
+  {
+    "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
+    "authors_year": "Liu et al., 2024",
+    "techniques": [
+      "Per-Channel Key Quantization",
+      "Pre-RoPE Key Quantization",
+      "Non-Uniform KV Cache Quantization",
+      "Per-Vector Dense-and-Sparse Quantization"
+    ],
+    "target_hardware": "A100-80GB GPU, 8-GPU system",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 7,
+    "quantization": "3-bit",
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Novel KV cache quantization techniques minimize memory consumption while preserving model accuracy.",
+    "url": "https://arxiv.org/abs/2401.18079"
+  },
+  {
+    "title": "Draft, Verify, & Improve Toward Training-Aware Speculative Decoding",
+    "authors_year": "Unspecified et al., 2024",
+    "techniques": [
+      "Speculative Decoding",
+      "Training-Aware Self-Speculation",
+      "KL to RL Schedule",
+      "Online Distillation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Convert verifier decisions into supervision signals to iteratively improve drafter performance",
+    "url": null
+  },
+  {
+    "title": "Generate API (Preview) | onnxruntime",
+    "authors_year": "Microsoft, 2024",
+    "techniques": [
+      "ONNX Runtime",
+      "Generative AI Acceleration",
+      "Optimized Inference"
+    ],
+    "target_hardware": "Intel CPUs, Intel integrated GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "ONNX Runtime provides simplified API for running generative AI models efficiently",
+    "url": "https://onnxruntime.ai/docs/genai"
+  },
+  {
+    "title": "The Geometry of LLM Quantization: GPTQ as Babai's Nearest Plane Algorithm",
+    "authors_year": "IST-DASLab et al., 2023",
+    "techniques": [
+      "post-training quantization",
+      "lattice-based quantization",
+      "non-clipping weight quantization"
+    ],
+    "target_hardware": "various accelerators, GPU inference",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4 (implied)",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "GPTQ quantization is mathematically equivalent to Babai's nearest plane algorithm on lattices.",
+    "url": "https://openreview.net/forum?id=NFB4QGGS65"
+  },
+  {
+    "title": "A Systematic Analysis of Hybrid Linear Attention",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Hybrid linear attention",
+      "Fixed-size hidden states",
+      "Selective gating",
+      "Hierarchical recurrence",
+      "Controlled forgetting"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 1.3,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Hybrid models with 3:1 to 6:1 linear-to-full attention ratio improve transformer recall efficiency.",
+    "url": "https://arxiv.org/html/2507.06457v1"
+  },
+  {
+    "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Gated delta rule",
+      "Adaptive memory control",
+      "Delta update rule",
+      "Hybrid layer architectures"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Gating and delta rule mechanisms complement each other for adaptive memory modifications",
+    "url": "https://arxiv.org/abs/2412.06464"
+  },
+  {
+    "title": "EfficientQAT: Efficient Quantization-Aware Training for Large Language Models",
+    "authors_year": "OpenGVLab et al., 2025",
+    "techniques": [
+      "Quantization-Aware Training",
+      "Efficient Model Optimization"
+    ],
+    "target_hardware": "General compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Improve large language model efficiency through advanced quantization techniques",
+    "url": "https://github.com/OpenGVLab/EfficientQAT"
+  },
+  {
+    "title": "Llama.cpp chatglm.cpp Windows on Snapdragon",
+    "authors_year": null,
+    "techniques": [],
+    "target_hardware": "Snapdragon Windows devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Performance optimization guide for running large language models on Snapdragon Windows devices",
+    "url": "https://www.qualcomm.com/developer/blog/2024/04/big-performance-boost-llama-cpp-chatglm-cpp-with-windows-on-snapdragon"
+  },
+  {
+    "title": "Power-Efficient AI: Running LLMs on Laptops in 2026",
+    "authors_year": "Unknown, 2026",
+    "techniques": [
+      "MobileFineTuner",
+      "hardware-software co-design",
+      "energy-aware computation"
+    ],
+    "target_hardware": "Laptops",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Power-efficient techniques enable running large language models directly on laptops",
+    "url": "https://dasroot.net/posts/2026/02/power-efficient-ai-running-llms-laptops-2026"
+  },
+  {
+    "title": "SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification",
+    "authors_year": "SpecInfer et al., 2023",
+    "techniques": [
+      "Tree-based speculative inference",
+      "Parallel token tree verification",
+      "Small speculative model prediction"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Use small speculative models to predict LLM outputs and verify token sequences in parallel",
+    "url": "https://arxiv.org/abs/2305.09781"
+  },
+  {
+    "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+    "authors_year": "Retnet et al., 2023",
+    "techniques": [
+      "retentive network architecture",
+      "alternative to transformer"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Retentive networks propose a new architecture potentially more efficient than transformers",
+    "url": "https://github.com/Jamie-Stirling/RetNet"
+  },
+  {
+    "title": "Zeus Project",
+    "authors_year": "Anonymous et al., 2023",
+    "techniques": [
+      "energy measurement",
+      "energy optimization"
+    ],
+    "target_hardware": "General computing platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Framework enables precise energy profiling and optimization for deep learning systems",
+    "url": "https://ml.energy/zeus"
+  },
+  {
+    "title": "FlexLLMGen: Running Large Language Models on a Single GPU for Throughput-Oriented Scenarios",
+    "authors_year": "FMInference et al., 2023",
+    "techniques": [
+      "Single GPU optimization",
+      "Throughput-oriented scheduling",
+      "Batching strategies"
+    ],
+    "target_hardware": "Single GPU systems",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Optimize single GPU inference for improved throughput in large language model scenarios",
+    "url": "https://github.com/FMInference/FlexLLMGen"
+  },
+  {
+    "title": "Paged Attention - vLLM",
+    "authors_year": "Kwon et al., 2023",
+    "techniques": [
+      "Paged Attention",
+      "Dynamic Page Management",
+      "Efficient Memory Allocation"
+    ],
+    "target_hardware": "NVIDIA GPUs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": false,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Dynamically manage GPU memory using virtual memory page techniques for efficient LLM inference",
+    "url": "https://docs.vllm.ai/en/latest/design/paged_attention"
+  },
+  {
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "authors_year": "Zhang et al., 2024",
+    "techniques": [
+      "Key-Value cache compression",
+      "Attention head feature clustering",
+      "Automatic KV position selection"
+    ],
+    "target_hardware": "A100-80GB GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Attention heads consistently focus on specific prompt features, enabling efficient KV cache compression.",
+    "url": "https://arxiv.org/html/2404.14469v2"
+  },
+  {
+    "title": "Researchers baked 3x inference speedups directly into LLM weights — without speculative decoding",
+    "authors_year": "Researchers et al., 2024",
+    "techniques": [
+      "single special token training modification",
+      "inference speedup"
+    ],
+    "target_hardware": "Unspecified general compute",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Adding a single special token during training can triple LLM inference speed without infrastructure changes.",
+    "url": "https://venturebeat.com/orchestration/researchers-baked-3x-inference-speedups-directly-into-llm-weights-without"
+  },
+  {
+    "title": "Execution Providers | onnxruntime",
+    "authors_year": "Microsoft Research, 2023",
+    "techniques": [
+      "Cross-platform ML inference acceleration",
+      "Multi-execution provider support",
+      "Hardware-specific optimization"
+    ],
+    "target_hardware": "Multiple platforms (CPU, GPU, NPU, etc.)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "ONNX Runtime provides flexible, optimized inference across different hardware platforms",
+    "url": "https://onnxruntime.ai/docs/execution-providers"
+  },
+  {
+    "title": "Install TVM Compiler — mlc-llm Documentation",
+    "authors_year": "MLC Team, 2023",
+    "techniques": [
+      "TVM compiler optimization",
+      "Model compilation for low-resource devices"
+    ],
+    "target_hardware": "CPU/GPU, low-resource devices",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": true,
+    "key_insight": "TVM enables efficient LLM deployment on constrained hardware through compiler optimizations",
+    "url": "https://llm.mlc.ai/docs/install/tvm.html"
+  },
+  {
+    "title": "AWQ vs GGUF vs GPTQ: Quantization Methods Compared for AI 2026",
+    "authors_year": null,
+    "techniques": [
+      "AWQ",
+      "GGUF",
+      "GPTQ"
+    ],
+    "target_hardware": "Intel i5/i7 laptops with integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": "INT4, Q4_K_M",
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Quantization techniques offer trade-offs between model size, performance, and inference speed.",
+    "url": "https://www.index.dev/skill-vs-skill/ai-gptq-vs-awq-vs-gguf"
+  },
+  {
+    "title": "The Best Open-Source Small Language Models (SLMs) in 2026",
+    "authors_year": null,
+    "techniques": [],
+    "target_hardware": "Resource-constrained environments",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Small language models are now capable enough for many production workloads",
+    "url": "https://www.bentoml.com/blog/the-best-open-source-small-language-models"
+  },
+  {
+    "title": "Low-Rank Prehab: Preparing Neural Networks for SVD Compression",
+    "authors_year": "Anonymous et al., 2024",
+    "techniques": [
+      "Low-Rank Prehab",
+      "Pre-compression fine-tuning",
+      "SVD compression"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Pre-compress fine-tuning steers weights toward spectrally compact regions for smoother compression.",
+    "url": "https://github.com/niqretnuh/PREHAB-SVD"
+  },
+  {
+    "title": "Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "Model-attention disaggregation",
+      "Heterogeneous device utilization",
+      "Attention operator offloading"
+    ],
+    "target_hardware": "Distributed heterogeneous cluster",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Split attention computation across cheap, memory-optimized devices to improve LLM inference efficiency.",
+    "url": "https://arxiv.org/abs/2405.01814"
+  },
+  {
+    "title": "Glinthawk: A Two-Tiered Architecture for Offline LLM Inference",
+    "authors_year": "Authors et al., 2025",
+    "techniques": [
+      "Two-tiered architecture",
+      "Offloading attention mechanism",
+      "Independent key-value cache scaling"
+    ],
+    "target_hardware": "NVIDIA T4 GPUs and standard CPU VMs",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Two-tiered architecture separates attention mechanism to optimize compute and memory utilization",
+    "url": "https://arxiv.org/abs/2501.11779"
+  },
+  {
+    "title": "Flash Attention",
+    "authors_year": "Dao et al., 2022",
+    "techniques": [
+      "IO-aware attention",
+      "Kernel-level optimization",
+      "Memory-efficient attention mechanism"
+    ],
+    "target_hardware": "GPU (NVIDIA)",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": false,
+    "applicable_to_cpu_only": false,
+    "key_insight": "Redesign attention computation to minimize memory movement and optimize GPU computation",
+    "url": "https://github.com/Dao-AILab/flash-attention/blob/main/flash_attn/models/gpt.py"
+  },
+  {
+    "title": "PEFT: State-of-the-art Parameter-Efficient Fine-Tuning",
+    "authors_year": "Hugging Face, 2023",
+    "techniques": [
+      "Parameter-Efficient Fine-Tuning",
+      "LoRA",
+      "Prefix Tuning",
+      "Prompt Tuning"
+    ],
+    "target_hardware": "Various compute platforms",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Fine-tune large models efficiently by updating only a small subset of parameters",
+    "url": "https://github.com/huggingface/peft"
+  },
+  {
+    "title": "DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "contrastive distillation",
+      "loss function synergy"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Contrastive distillation enhances LLM performance by synergizing loss functions across data types.",
+    "url": null
+  },
+  {
+    "title": "FinLoRA: Benchmarking LoRA Methods for Fine-Tuning LLMs on Financial Datasets",
+    "authors_year": "Anonymous authors, 2026",
+    "techniques": [
+      "Low-Rank Adaptation (LoRA)",
+      "Parameter-Efficient Fine-Tuning (PEFT)",
+      "Quantized LoRA"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "LoRA can enhance pre-trained LLMs with domain-specific financial knowledge",
+    "url": "https://anonymous.4open.science/r/FinLoRA-ICLR-115E"
+  },
+  {
+    "title": "LoRA-XS: Low-Rank Adaptation with Extremely Small Number of Parameters",
+    "authors_year": "Banaei et al., 2024",
+    "techniques": [
+      "Low-Rank Adaptation",
+      "Extremely Small Parameter Space"
+    ],
+    "target_hardware": "Not specified",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Low-rank adaptation enables efficient fine-tuning with minimal additional parameters.",
+    "url": "https://github.com/MohammadrezaBanaei/LoRA-XS"
+  },
+  {
+    "title": "OpenLLaMA-3B Distillation Techniques",
+    "authors_year": "Unknown et al., 2024",
+    "techniques": [
+      "DistiLLM",
+      "GKD",
+      "ImitKD",
+      "KD",
+      "MiniLLM",
+      "SeqKD"
+    ],
+    "target_hardware": "Intel laptop with integrated GPU",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": 3,
+    "quantization": null,
+    "applicable_to_intel_igpu": true,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Multiple knowledge distillation techniques explored for optimizing 3B language model",
+    "url": "https://drive.google.com/drive/folders/1Yun1aNpn-mz2h-IVH_VdJ1Jhzm0K55Bo?usp=sharing"
+  },
+  {
+    "title": "DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs",
+    "authors_year": "Unnamed et al., 2024",
+    "techniques": [
+      "contrastive distillation",
+      "loss function synergy"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Contrastive distillation can improve student model performance by synergizing loss functions",
+    "url": "https://arxiv.org/abs/2503.07067"
+  },
+  {
+    "title": "Neural Network Pruning: Lottery Ticket to SparseGPT",
+    "authors_year": "Unknown et al., 2023",
+    "techniques": [
+      "Model Pruning",
+      "Lottery Ticket Hypothesis",
+      "SparseGPT"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Pruning techniques can reduce model complexity while preserving performance across enterprise AI applications.",
+    "url": "https://www.meta-intelligence.tech/en/insight-pruning"
+  },
+  {
+    "title": "Which Quantization Method Is Best for You?: GGUF, GPTQ, or AWQ",
+    "authors_year": "E2E Networks, 2024",
+    "techniques": [
+      "quantization comparison"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": [
+      "GGUF",
+      "GPTQ",
+      "AWQ"
+    ],
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Different quantization methods offer unique trade-offs for LLM inference performance",
+    "url": "https://www.e2enetworks.com/blog/which-quantization-method-is-best-for-you-gguf-gptq-or-awq"
+  },
+  {
+    "title": "AVX-512 Performance + Power Efficiency Shines With AMD Strix Halo",
+    "authors_year": "Phoronix, 2024",
+    "techniques": [
+      "AVX-512 optimization",
+      "OpenVINO toolkit"
+    ],
+    "target_hardware": "AMD Strix Halo laptop processors",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "AVX-512 provides significant performance uplift for AI workloads across Intel and AMD processors",
+    "url": "https://www.phoronix.com/review/amd-strix-halo-avx512/3"
+  },
+  {
+    "title": "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+    "authors_year": "Authors et al., 2024",
+    "techniques": [
+      "Adaptive budget allocation for KV cache eviction",
+      "Non-uniform budget assignment across attention heads",
+      "Minimizing L1 eviction loss"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Adaptive budget allocation across attention heads optimizes KV cache eviction for improved inference efficiency",
+    "url": "https://github.com/FFY0/AdaKV"
+  },
+  {
+    "title": "Adaptive KV-Cache Compression without Manually Setting Budget",
+    "authors_year": "Tang et al., 2024",
+    "techniques": [
+      "KV-Cache Compression",
+      "Adaptive Budget Allocation"
+    ],
+    "target_hardware": null,
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Dynamically compress key-value cache without manual budget constraints",
+    "url": "https://arxiv.org/pdf/2509.03136"
+  },
+  {
+    "title": "Add energy efficiency tracking index to llama-bench tests",
+    "authors_year": "ggml-org, 2023",
+    "techniques": [
+      "energy efficiency tracking"
+    ],
+    "target_hardware": "Unspecified laptop/desktop",
+    "benchmark_toks_per_sec": null,
+    "memory_footprint_gb": null,
+    "model_size_b": null,
+    "quantization": null,
+    "applicable_to_intel_igpu": null,
+    "applicable_to_cpu_only": null,
+    "key_insight": "Propose adding energy efficiency measurement to benchmark tests",
+    "url": "https://github.com/ggerganov/llama.cpp/discussions/4297"
+  }
+]
