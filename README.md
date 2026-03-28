@@ -211,3 +211,4 @@ We are trying to build architecture for running low-parameter (≤3B) language m
 Our goal includes having an output of 25+ tokens / second from an 8GB memory & a normal intel CPU laptop without any GPU.
 >>>>>>> 40b6ff3f36598164aede05ead96c6710a939f0b3
 
+
